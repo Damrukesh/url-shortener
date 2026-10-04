@@ -1,0 +1,21 @@
+wrk -t4 -c50 -d15s http://localhost:8000/q0W
+Running 15s test @ http://localhost:8000/q0W
+  4 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   145.57ms   67.56ms 562.56ms   68.58%
+    Req/Sec    83.68     21.03   140.00     68.12%
+  4989 requests in 15.02s, 618.75KB read
+Requests/sec:    332.13
+Transfer/sec:     41.19KB
+
+
+
+rtener$ wrk -t4 -c50 -d15s http://localhost:8000/q0W
+Running 15s test @ http://localhost:8000/q0W
+  4 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.25ms    5.70ms 135.62ms   79.04%
+    Req/Sec   568.74     84.06   727.00     68.67%
+  33983 requests in 15.01s, 4.12MB read
+Requests/sec:   2263.90
+Transfer/sec:    280.78KB
